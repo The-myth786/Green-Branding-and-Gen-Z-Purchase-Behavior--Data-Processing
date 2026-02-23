@@ -1,0 +1,85 @@
+======================================================================
+GREEN BRANDING & GEN Z PURCHASE BEHAVIOR — ANALYSIS REPORT
+======================================================================
+
+── CRONBACH'S ALPHA ──
+             Construct  N_Items  Cronbach_Alpha      Verdict
+Environmental_Identity        3          0.7001   Acceptable
+        Green_Branding        5          0.5737         Poor
+      Social_Influence        2          0.6639 Questionable
+     Price_Sensitivity        2          0.4143         Poor
+
+── DESCRIPTIVE STATISTICS ──
+          Environmental_Identity  Green_Branding  Social_Influence  Price_Sensitivity  Purchase_Intention
+N                       141.0000        141.0000          141.0000           141.0000            141.0000
+Mean                      3.7565          3.1518            3.1383             2.9574              0.8440
+SD                        0.6484          0.5149            0.7885             0.7524              0.3642
+Min                       1.0000          1.0000            1.0000             1.0000              0.0000
+Max                       5.0000          4.4000            5.0000             5.0000              1.0000
+Skewness                 -0.7177         -0.9670           -0.5559            -0.2360             -1.9162
+Kurtosis                  2.2407          2.8014            0.2938             0.5334              1.6958
+
+── PEARSON CORRELATION MATRIX ──
+                        Environmental_Identity  Green_Branding  Social_Influence  Price_Sensitivity  Purchase_Intention
+Environmental_Identity                   1.000           0.422             0.378             -0.217               0.453
+Green_Branding                           0.422           1.000             0.486             -0.295               0.264
+Social_Influence                         0.378           0.486             1.000             -0.231               0.262
+Price_Sensitivity                       -0.217          -0.295            -0.231              1.000              -0.090
+Purchase_Intention                       0.453           0.264             0.262             -0.090               1.000
+
+── VIF TABLE ──
+              Variable    VIF Verdict
+Environmental_Identity 1.2876      OK
+        Green_Branding 1.4837      OK
+      Social_Influence 1.3850      OK
+     Price_Sensitivity 1.1156      OK
+
+── OLS REGRESSION SUMMARY ──
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:     Purchase_Intention   R-squared:                       0.218
+Model:                            OLS   Adj. R-squared:                  0.195
+Method:                 Least Squares   F-statistic:                     9.486
+Date:                Fri, 20 Feb 2026   Prob (F-statistic):           8.56e-07
+Time:                        10:51:50   Log-Likelihood:                -39.794
+No. Observations:                 141   AIC:                             89.59
+Df Residuals:                     136   BIC:                             104.3
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+const                     -0.3214      0.266     -1.207      0.229      -0.848       0.205
+Environmental_Identity     0.2252      0.048      4.660      0.000       0.130       0.321
+Green_Branding             0.0443      0.065      0.678      0.499      -0.085       0.173
+Social_Influence           0.0408      0.041      0.991      0.323      -0.041       0.122
+Price_Sensitivity          0.0175      0.039      0.451      0.652      -0.059       0.094
+==============================================================================
+Omnibus:                       45.036   Durbin-Watson:                   2.152
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               77.038
+Skew:                          -1.579   Prob(JB):                     1.87e-17
+Kurtosis:                       4.770   Cond. No.                         65.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+── LOGISTIC REGRESSION SUMMARY ──
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:     Purchase_Intention   No. Observations:                  141
+Model:                          Logit   Df Residuals:                      136
+Method:                           MLE   Df Model:                            4
+Date:                Fri, 20 Feb 2026   Pseudo R-squ.:                  0.2497
+Time:                        10:51:50   Log-Likelihood:                -45.812
+converged:                       True   LL-Null:                       -61.057
+Covariance Type:            nonrobust   LLR p-value:                 3.892e-06
+==========================================================================================
+                             coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+const                     -7.6615      2.963     -2.586      0.010     -13.468      -1.855
+Environmental_Identity     2.0763      0.567      3.659      0.000       0.964       3.188
+Green_Branding             0.2745      0.636      0.432      0.666      -0.972       1.521
+Social_Influence           0.2990      0.421      0.711      0.477      -0.526       1.124
+Price_Sensitivity          0.0894      0.402      0.222      0.824      -0.699       0.878
+==========================================================================================
